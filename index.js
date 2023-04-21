@@ -66,6 +66,10 @@ document.addEventListener("scroll", function () {
         }
 })
 
-document.body.onload = [castParallax(), scrollNav()];
+function hideLoader() {
+    document.getElementById("loader").style.display = "none";
+}
+
+document.body.onload = [castParallax(), scrollNav(), hideLoader()];
 
 // window.onscroll=slideAnim();
